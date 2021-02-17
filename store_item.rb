@@ -10,11 +10,17 @@ class Inventory
   attr_reader :element, :atomic_number, :price
   attr_writer :price
 
-  def initialize(element, atomic_number, price)
-    @element = element
-    @atomic_number = atomic_number
-    @price = price
+  def initialize(item)
+  @element = item[:element]
+  @atomic_number = item[:atomic_number]
+  @price = item[:price]
   end
+
+  # def initialize(element, atomic_number, price)
+  #   @element = element
+  #   @atomic_number = atomic_number
+  #   @price = price
+  # end
 
   # def element # reader
   #   @element
@@ -38,5 +44,5 @@ class Inventory
 
 end
 
-inventory1 = Inventory.new("Carbon", 6, 2.25)
+inventory1 = Inventory.new({element: "Carbon", atomic_number: 6, price: 2.25})
 inventory1.info
