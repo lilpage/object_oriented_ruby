@@ -13,5 +13,16 @@ class Inventory
     @price = price
   end
 
+  def element # reader
+    @element
+  end
+
+  def atomic_number #reader
+    @atomic_number
+  end
+
+  def price #reader
+    @price
+  end
 
 end
