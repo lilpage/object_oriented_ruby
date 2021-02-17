@@ -29,7 +29,11 @@ class Inventory
     @price = num
   end
 
+  def info
+    puts "#{@element} is atomic number #{@atomic_number}. It costs #{@price} "
+  end
+
 end
 
 inventory1 = Inventory.new("carbon", 6, 2.25)
-puts inventory1
+inventory1.info
